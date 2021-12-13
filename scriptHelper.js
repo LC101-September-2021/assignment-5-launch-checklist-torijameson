@@ -36,8 +36,8 @@ function validateInput(testInput) { //problem: how is this being used to check t
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let pilotStatus = document.getElementById("pilotStatus");
    let copilotStatus = document.getElementById("copilotStatus");
-   let fuelLevel = document.getElementById("fuelLevel");
-   let cargoLevel= document.getElementById("cargoLevel");
+   let fuel = document.getElementById("fuelStatus");
+   let cargo= document.getElementById("cargoStatus");
    //let launchStatus=document.getElementById("launchStatus")
 
    if ((validateInput(pilot)==="Empty")||(validateInput(copilot)==="Empty")||(validateInput(fuelLevel)==="Empty")||(validateInput(cargoLevel)==="Empty")){
@@ -54,7 +54,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             //alert ("Fuel  level too low for launch")
             fuelLevel.innerHTML=`Fuel Level is too low for launch`;
             launchStatus.innerHTML="Shuttle not ready for launch!";
-            launchStatus.style.color="red";
+            launchStatus.style.color="rgb(199,37,78)";
             cargoLevel.innerHTML='Cargo mass is low enough for launch!';
         } else if (fuelLevel >= 10000 && cargoLevel > 10000) {
             //alert ("Cargo Mass too high for Launch")
